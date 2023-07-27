@@ -1,0 +1,57 @@
+.container {
+  background-image: url("../../assets/crew/background-crew-desktop.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: fixed;
+  .body_container {
+    position: absolute;
+    top: 100px;
+    padding: 20px 100px;
+
+    .div_container {
+      display: flex;
+      .text_container {
+        margin-top: 100px;
+        .crew_role {
+          font-family: "Bellefair", sans-serif;
+          color: #979797;
+          font-size: 32px;
+          padding: 10px 0;
+        }
+        .crew_name {
+          font-family: "Bellefair", sans-serif;
+          color: white;
+          font-size: 56px;
+        }
+        .crew_bio {
+          font-family: "Barlow Condensed", sans-serif;
+          color: #d0d6f9;
+          font-size: 20px;
+          padding: 20px 0;
+          width: 40%;
+          height: 130px;
+        }
+        .btn_container {
+          display: flex;
+          margin-top: 50px;
+          div {
+            width: 15px;
+            height: 15px;
+            background-color: #979797;
+            border-radius: 50%;
+            margin-right: 20px;
+            cursor: pointer;
+          }
+          .active_btn {
+            background-color: #fff;
+          }
+        }
+      }
+      .img_container {
+        position: relative;
+        left: 50px;
+      }
+    }
+  }
+}

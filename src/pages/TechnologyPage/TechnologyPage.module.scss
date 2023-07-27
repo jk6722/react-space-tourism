@@ -1,0 +1,12 @@
+.container {
+  background-image: url("../../assets/technology/background-technology-desktop.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: fixed;
+  .body_container {
+    position: absolute;
+    top: 100px;
+    padding: 20px 100px;
+  }
+}
