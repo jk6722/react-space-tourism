@@ -6,7 +6,7 @@
   position: fixed;
   .body_container {
     padding: 100px;
-    margin-top: 100px;
+    margin-top: 150px;
     display: flex;
     .text_container {
       width: 50%;
@@ -36,8 +36,8 @@
       bottom: 160px;
       right: 150px;
       .btn {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         display: flex;
         background-color: white;
         border-radius: 50%;
@@ -49,7 +49,7 @@
           font-size: 24px;
         }
         &:hover {
-          outline: solid 30px #979797;
+          outline: solid 30px rgba(151, 151, 151, 0.4);
           transition: outline 0.3s linear;
         }
       }

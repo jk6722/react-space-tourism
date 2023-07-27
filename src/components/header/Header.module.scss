@@ -1,18 +1,18 @@
 .container {
   // margin: 60px 0 0 50px;
   position: relative;
-  z-index: 2;
   // display: flex;
+  // margin-top: 100px;
+  padding-top: 20px;
   .header_container {
     // position: absolute;
     display: flex;
     align-items: center;
-    margin: 40px 0 0 20px;
+    margin: 40px 0 0 60px;
     .line_box_container {
-      width: 350px;
-      position: absolute;
-      top: 50%;
-      left: 150px;
+      width: 30%;
+      position: relative;
+      left: 100px;
       z-index: 2;
       .line_box {
         border-bottom: 0.5px solid #d0d6f9;
@@ -21,13 +21,13 @@
     }
     .link_container {
       display: flex;
-      // padding: 30px 0px;
-      height: 70px;
+      height: 100px;
       background-color: rgba(0, 0, 0, 0.04);
       backdrop-filter: blur(50px);
       position: absolute;
       right: 0;
       overflow: hidden;
+      padding: 0 60px;
       .link {
         display: flex;
         font-size: 14px;
@@ -37,6 +37,7 @@
         justify-content: center;
         text-decoration: none;
         color: white;
+        margin: 0 20px;
         span {
           height: 100%;
           display: flex;
@@ -50,23 +51,19 @@
         display: flex;
         font-size: 14px;
         position: relative;
-        padding: 0 50px;
         align-items: center;
         justify-content: center;
         text-decoration: none;
         color: white;
+        padding: 0 50px;
+        margin: 0 20px;
+
         span {
           height: 100%;
           display: flex;
           align-items: center;
           border-bottom: 2px solid white;
         }
-      }
-      .link:nth-child(1) {
-        margin-left: 60px;
-      }
-      .link:last-child {
-        margin-right: 60px;
       }
     }
   }
