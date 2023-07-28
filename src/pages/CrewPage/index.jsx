@@ -53,7 +53,7 @@ const CrewPage = () => {
             </div>
             <div className={styles.img_container}>
               <img
-                src={`public/${people[index].images.webp.slice(1)}`}
+                src={`../../${people[index].images.webp.slice(2)}`}
                 alt={people[index].name}
               />
             </div>

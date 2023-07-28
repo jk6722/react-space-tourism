@@ -55,7 +55,7 @@ const TechnologyPage = () => {
             </div>
             <div className={styles.img_container}>
               <img
-                src={`public/${techs[index].images.portrait.slice(1)}`}
+                src={`../../${techs[index].images.portrait.slice(2)}`}
                 alt={techs[index].name}
               />
             </div>
