@@ -1,15 +1,21 @@
 import styles from "./Header.module.scss";
 import Logo from "/assets/shared/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Header = () => {
   const [selected, setSelected] = useState("home");
+  const navigate = useNavigate();
+
+  const handleClickLogo = () => {
+    navigate("/");
+    setSelected("home");
+  };
 
   return (
     <div className={styles.container}>
       <div className={styles.header_container}>
-        <div className={styles.img_container}>
+        <div className={styles.img_container} onClick={handleClickLogo}>
           <img src={Logo} alt="logo" height="48px" />
         </div>
         <div className={styles.line_box_container}>
