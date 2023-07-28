@@ -38,7 +38,7 @@ const travelTimes = new Map([
 
 const DestinationPage = () => {
   const [active, setActive] = useState("MOON");
-  const url = `/src/assets/destination/image-${active}.webp`;
+  const url = `../../assets/destination/image-${active}.webp`;
 
   return (
     <div className={styles.container}>
