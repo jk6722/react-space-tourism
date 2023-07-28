@@ -9,7 +9,7 @@ const CrewPage = () => {
 
   useEffect(() => {
     setPeople(data["crew"]);
-    console.log(people);
+    // console.log(people);
   }, [people]);
 
   return (
