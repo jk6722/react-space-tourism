@@ -8,7 +8,7 @@ const TechnologyPage = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    console.log(data["technology"]);
+    // console.log(data["technology"]);
     setTechs(data["technology"]);
   }, []);
 
@@ -55,7 +55,7 @@ const TechnologyPage = () => {
             </div>
             <div className={styles.img_container}>
               <img
-                src={`../../${techs[index].images.portrait.slice(2)}`}
+                src={`${techs[index].images.portrait.slice(1)}`}
                 alt={techs[index].name}
               />
             </div>
