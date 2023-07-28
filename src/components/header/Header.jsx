@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import Logo from "../../assets/shared/logo.svg";
+import Logo from "../../../public/assets/shared/logo.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
