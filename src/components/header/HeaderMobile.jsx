@@ -15,7 +15,7 @@ const HeaderModal = ({ setIsModalOpen }) => {
 
   useEffect(() => {}, [refModal]);
 
-  // useOnclickOutside(refModal, () => setIsModalOpen(false));
+  useOnclickOutside(refModal, () => setIsModalOpen(false));
 
   const handleClickLink = (linkName) => {
     setSelectedRouter(linkName);
@@ -23,6 +23,15 @@ const HeaderModal = ({ setIsModalOpen }) => {
 
   return (
     <div className={styles.modal_container}>
+      <img
+        className={styles.btn_x}
+        src={Xbtn}
+        onClick={() => {
+          setIsModalOpen((prev) => {
+            return !prev;
+          });
+        }}
+      ></img>
       <div
         className={styles.link_container}
         onClick={() => {
@@ -110,11 +119,7 @@ const HeaderMobile = () => {
             });
           }}
         >
-          {isModalOpen ? (
-            <img className={styles.btn_x} src={Xbtn}></img>
-          ) : (
-            <img src={Hamburger} alt="hamburger" />
-          )}
+          <img src={Hamburger} alt="hamburger" />
         </div>
       </div>
     </div>
