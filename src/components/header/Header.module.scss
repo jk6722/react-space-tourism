@@ -12,14 +12,18 @@
     .img_container {
       cursor: pointer;
     }
-    .line_box_container {
-      width: 20%;
-      position: relative;
-      left: 100px;
-      z-index: 2;
-      .line_box {
-        border-bottom: 0.5px solid #d0d6f9;
-        height: 50%;
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+    }
+    @media screen and (min-width: 900px) {
+      .line_box_container {
+        width: 20%;
+        position: relative;
+        left: 100px;
+        z-index: 2;
+        .line_box {
+          border-bottom: 0.5px solid #d0d6f9;
+          height: 50%;
+        }
       }
     }
     .link_container {
@@ -35,18 +39,36 @@
         display: flex;
         font-size: 14px;
         position: relative;
-        padding: 0 50px;
+        @media screen and (min-width: 600px) and (max-width: 900px) {
+          margin: 0 20px;
+        }
+        @media screen and (min-width: 900px) {
+          margin: 0 70px;
+        }
         align-items: center;
         justify-content: center;
         text-decoration: none;
         color: white;
-        margin: 0 20px;
-        span {
-          height: 100%;
+        &:hover {
+          border-bottom: 5px solid #979797;
+        }
+
+        .span_container {
           display: flex;
-          align-items: center;
-          &:hover {
-            border-bottom: 5px solid #979797;
+          span: {
+            height: 100%;
+            display: block;
+          }
+
+          @media screen and (max-width: 900px) {
+            .link_number {
+              display: none;
+            }
+          }
+          @media screen and (min-width: 900px) {
+            .link_number {
+              margin-right: 11px;
+            }
           }
         }
       }
@@ -58,14 +80,27 @@
         justify-content: center;
         text-decoration: none;
         color: white;
-        padding: 0 50px;
-        margin: 0 20px;
-
-        span {
-          height: 100%;
+        border-bottom: 5px solid white;
+        box-sizing: border-box;
+        @media screen and (min-width: 600px) and (max-width: 900px) {
+          margin: 0 20px;
+        }
+        @media screen and (min-width: 900px) {
+          margin: 0 70px;
+        }
+        .span_container {
           display: flex;
-          align-items: center;
-          border-bottom: 5px solid white;
+
+          @media screen and (max-width: 900px) {
+            .link_number {
+              display: none;
+            }
+          }
+          @media screen and (min-width: 900px) {
+            .link_number {
+              margin-right: 11px;
+            }
+          }
         }
       }
     }

@@ -1,5 +1,13 @@
 .container {
-  background-image: url("/assets/destination/background-destination-desktop.jpg");
+  @media screen and (max-width: 600px) {
+    background-image: url("/assets/destination/background-destination-mobile.jpg");
+  }
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+    background-image: url("/assets/destination/background-destination-tablet.jpg");
+  }
+  @media screen and (min-width: 900px) {
+    background-image: url("/assets/destination/background-destination-desktop.jpg");
+  }
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -9,32 +17,87 @@
     position: absolute;
     top: 100px;
     padding: 20px 100px;
+    @media screen and (max-width: 600px) {
+      margin-top: 10px;
+      padding: 0px;
+    }
     .div_container {
       display: flex;
       margin-top: 20px;
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+      }
       .img_container {
-        padding: 30px;
-        margin-right: 100px;
+        @media screen and (min-width: 900px) {
+          padding: 30px;
+          margin-right: 100px;
+        }
+        @media screen and (min-width: 600px) and (max-width: 900px) {
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 60%;
+            height: 60%;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 50%;
+            height: 50%;
+          }
+        }
       }
       .text_container {
         padding: 0 0 0 30px;
-
         width: 50%;
+        @media screen and (min-width: 600px) and (max-width: 900px) {
+          width: 100%;
+          padding: 30px 0;
+        }
+        @media screen and (max-width: 600px) {
+          width: 100%;
+          padding: 10px 0 0;
+          // padding: 0;
+        }
         .filter {
           display: flex;
+          @media screen and (max-width: 900px) {
+            justify-content: center;
+          }
         }
         .Name {
           margin-top: 20px;
           font-family: "Bellefair", sans-serif;
           font-size: 100px;
           color: white;
+          @media screen and (max-width: 900px) {
+            text-align: center;
+          }
+          @media screen and (max-width: 600px) {
+            font-size: 64px;
+          }
         }
         .description {
           color: #d0d6f9;
           width: 80%;
+          @media screen and (max-width: 900px) {
+            width: 100%;
+            margin-bottom: 30px;
+          }
+          @media screen and (max-width: 600px) {
+            width: 80%;
+            margin: 15px auto;
+          }
           span {
             display: block;
             padding-bottom: 30px;
+            @media screen and (max-width: 900px) {
+              text-align: center;
+            }
           }
         }
         .info_container {
@@ -42,18 +105,36 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          @media screen and (max-width: 600px) {
+            flex-direction: column;
+          }
           .info {
             width: 50%;
+            @media screen and (min-width: 600px) and (max-width: 900px) {
+              padding: 30px;
+            }
+            @media screen and (max-width: 600px) {
+              padding: 15px;
+            }
             .info_title {
               font-family: "Barlow Condensed", sans-serif;
               letter-spacing: 2px;
               color: #d0d6f9;
+              @media screen and (max-width: 900px) {
+                text-align: center;
+              }
+              @media screen and (max-width: 600px) {
+                padding: 10px;
+              }
             }
             .info_content {
               font-family: "Bellefair", sans-serif;
               font-size: 28px;
               padding-top: 10px;
               color: white;
+              @media screen and (max-width: 900px) {
+                text-align: center;
+              }
             }
           }
         }

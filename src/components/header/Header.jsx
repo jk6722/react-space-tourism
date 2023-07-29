@@ -30,7 +30,9 @@ const Header = () => {
             className={selected === "home" ? styles.selected : styles.link}
             to="/"
           >
-            <span>00 HOME</span>
+            <div className={styles.span_container}>
+              <span className={styles.link_number}>00 </span> <span>HOME</span>
+            </div>
           </Link>
           <Link
             onClick={() => {
@@ -41,7 +43,10 @@ const Header = () => {
             }
             to="/destination"
           >
-            <span>01 DESTINATION</span>
+            <div className={styles.span_container}>
+              <span className={styles.link_number}>01 </span>
+              <span>DESTINATION</span>
+            </div>
           </Link>
           <Link
             onClick={() => {
@@ -50,7 +55,9 @@ const Header = () => {
             className={selected === "crew" ? styles.selected : styles.link}
             to="/crew"
           >
-            <span>02 CREW</span>
+            <div className={styles.span_container}>
+              <span className={styles.link_number}>02 </span> <span>CREW</span>
+            </div>
           </Link>
           <Link
             onClick={() => {
@@ -61,7 +68,10 @@ const Header = () => {
             }
             to="/technology"
           >
-            <span>03 TECHNOLOGY</span>
+            <div className={styles.span_container}>
+              <span className={styles.link_number}>03 </span>
+              <span>TECHNOLOGY</span>
+            </div>
           </Link>
         </div>
       </div>

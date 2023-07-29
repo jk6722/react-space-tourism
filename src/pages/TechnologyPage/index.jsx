@@ -15,7 +15,11 @@ const TechnologyPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.body_container}>
-        <Title content_num="03" content_text={"SPACE LAUNCH 101"} />
+        <Title
+          className={styles.title}
+          content_num="03"
+          content_text={"SPACE LAUNCH 101"}
+        />
         {techs && (
           <div className={styles.div_container}>
             <div className={styles.btn_container}>
@@ -55,7 +59,13 @@ const TechnologyPage = () => {
             </div>
             <div className={styles.img_container}>
               <img
+                className={styles.desktopImage}
                 src={`${techs[index].images.portrait.slice(1)}`}
+                alt={techs[index].name}
+              />
+              <img
+                className={styles.tabletImage}
+                src={`${techs[index].images.landscape.slice(1)}`}
                 alt={techs[index].name}
               />
             </div>

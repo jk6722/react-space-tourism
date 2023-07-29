@@ -11,7 +11,7 @@ const HomePage = () => {
           <div className={styles.heading_one}>
             <span>SPACE</span>
           </div>
-          <div>
+          <div className={styles.description}>
             <p>
               Let’s face it; if you want to go to space, you might as well
               genuinely go to outer space and not hover kind of on the edge of

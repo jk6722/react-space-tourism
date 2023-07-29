@@ -1,0 +1,46 @@
+.container {
+  .header_container {
+    height: 100px;
+    // background-color: orange;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    .logo_container {
+      width: 100%;
+      // background-color: blue;
+    }
+    .hambug_container {
+      z-index: 1;
+    }
+  }
+  .modal_container {
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    z-index: 1;
+    backdrop-filter: blur(30px);
+    // background-color: orange;
+    right: 0;
+    .link_container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 150px;
+      .link {
+        padding: 10px 30px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        .link_number {
+          padding-right: 5px;
+          font-weight: bold;
+        }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+}

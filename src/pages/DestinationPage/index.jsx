@@ -57,13 +57,13 @@ const DestinationPage = () => {
                   <div className={styles.info}>
                     <div className={styles.info_title}>Avg. distance</div>
                     <div className={styles.info_content}>
-                      {dests[index].distance}
+                      {dests[index].distance.toUpperCase()}
                     </div>
                   </div>
                   <div className={styles.info}>
                     <div className={styles.info_title}>Est. travel</div>
                     <div className={styles.info_content}>
-                      {dests[index].travel}
+                      {dests[index].travel.toUpperCase()}
                     </div>
                   </div>
                 </div>

@@ -19,7 +19,9 @@ const CrewPage = () => {
         {people && (
           <div className={styles.div_container}>
             <div className={styles.text_container}>
-              <div className={styles.crew_role}>{people[index].role}</div>
+              <div className={styles.crew_role}>
+                {people[index].role.toUpperCase()}
+              </div>
               <div className={styles.crew_name}>
                 {people[index].name.toUpperCase()}
               </div>
