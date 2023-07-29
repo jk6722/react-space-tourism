@@ -108,8 +108,8 @@ const HeaderMobile = () => {
     <div className={styles.container}>
       {isModalOpen && <HeaderModal setIsModalOpen={setIsModalOpen} />}
       <div className={styles.header_container}>
-        <div className={styles.logo_container} onClick={handleNavToHome}>
-          <img src={Logo} alt="logo" />
+        <div className={styles.logo_container}>
+          <img src={Logo} alt="logo" onClick={handleNavToHome} />
         </div>
         <div
           className={styles.hambug_container}
