@@ -1,6 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./HomePage.module.scss";
+import { useSetRecoilState } from "recoil";
+import { SelectedRouterAtom } from "../../recoil/SelectedRouter";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const setSelectedRouter = useSetRecoilState(SelectedRouterAtom);
+
+  const handleClickBtn = () => {
+    navigate("/destination");
+    setSelectedRouter("destination");
+  };
   return (
     <div className={styles.container}>
       <div className={styles.body_container}>
@@ -20,7 +30,7 @@ const HomePage = () => {
             </p>
           </div>
         </div>
-        <div className={styles.btn_container}>
+        <div className={styles.btn_container} onClick={handleClickBtn}>
           <div className={styles.btn}>
             <span>EXPLORE</span>
           </div>

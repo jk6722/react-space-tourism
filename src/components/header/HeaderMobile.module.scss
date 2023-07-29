@@ -11,14 +11,14 @@
       // background-color: blue;
     }
     .hambug_container {
-      z-index: 1;
+      z-index: 3;
     }
   }
   .modal_container {
     position: fixed;
     width: 60%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     backdrop-filter: blur(30px);
     // background-color: orange;
     right: 0;
@@ -39,6 +39,19 @@
         }
         &:hover {
           background-color: rgba(0, 0, 0, 0.4);
+        }
+      }
+      .selected {
+        padding: 10px 30px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        .link_number {
+          padding-right: 5px;
+          font-weight: bold;
         }
       }
     }

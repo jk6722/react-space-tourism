@@ -1,10 +1,11 @@
 import styles from "./Header.module.scss";
 import Logo from "/assets/shared/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { SelectedRouterAtom } from "../../recoil/SelectedRouter";
 
 const Header = () => {
-  const [selected, setSelected] = useState("home");
+  const [selected, setSelected] = useRecoilState(SelectedRouterAtom);
   const navigate = useNavigate();
 
   const handleClickLogo = () => {
