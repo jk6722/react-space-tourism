@@ -61,6 +61,13 @@
             order: 3;
             font-size: 24px;
             margin-bottom: 20px;
+            padding: 10px 0;
+          }
+          @media screen and (min-width: 900px) {
+            padding: 15px 0;
+          }
+          @media screen and (min-width: 600px) and (max-width: 900px) {
+            padding: 15px 0;
           }
         }
         .crew_bio {
@@ -71,27 +78,32 @@
           width: 50%;
           height: 130px;
           @media screen and (min-width: 600px) and (max-width: 900px) {
-            width: 70%;
+            font-size: 16px;
+            width: 57%;
             padding: 0;
             margin: auto;
             text-align: center;
+            line-height: 28px;
           }
           @media screen and (max-width: 600px) {
             order: 4;
-            width: 90%;
+            width: 60%;
             padding: 0;
+            font-size: 15px;
             margin: auto;
             text-align: center;
+            line-height: 25px;
+          }
+          @media screen and (min-width: 900px) {
+            line-height: 32px;
           }
         }
         .btn_container {
           display: flex;
-          margin-top: 50px;
+          margin-top: 80px;
           @media screen and (max-width: 900px) {
             justify-content: center;
             margin-top: 0;
-          }
-          @media screen and (max-width: 600px) {
             margin-bottom: 20px;
           }
           div {
@@ -103,9 +115,9 @@
             }
             background-color: #979797;
             border-radius: 50%;
-            margin-right: 20px;
+            margin-right: 25px;
             @media screen and (max-width: 900px) {
-              margin: 0 8px;
+              margin: 0 10px;
             }
             cursor: pointer;
           }
@@ -115,10 +127,6 @@
         }
       }
       .img_container {
-        @media screen and (min-width: 900px) {
-          position: relative;
-          left: 50px;
-        }
         @media screen and (min-width: 600px) and (max-width: 900px) {
           display: flex;
           justify-content: center;

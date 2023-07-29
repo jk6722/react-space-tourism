@@ -2,9 +2,15 @@
   font-family: "Barlow Condensed", sans-serif;
   font-size: 28px;
   color: white;
-  letter-spacing: 3px;
+  letter-spacing: 4.72px;
   @media screen and (max-width: 600px) {
     text-align: center;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+    font-size: 20px;
+    letter-spacing: 3.38px;
   }
   .title_number {
     color: darkgray;
@@ -15,11 +21,17 @@
   font-family: "Barlow Condensed", sans-serif;
   font-size: 28px;
   color: white;
-  letter-spacing: 3px;
+  letter-spacing: 4.72px;
+
   @media screen and (600px <= width <= 900px) {
     padding: 20px 100px;
+    font-size: 20px;
+    letter-spacing: 3.38px;
   }
   @media screen and (max-width: 600px) {
+    letter-spacing: 2.7px;
+    font-size: 16px;
+
     text-align: center;
   }
   .title_number {
