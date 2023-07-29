@@ -1,6 +1,9 @@
 .container {
+  @media screen and (max-width: 600px) {
+    background-image: url("/assets/technology/background-technology-mobile.jpg");
+  }
   @media screen and (min-width: 600px) and (max-width: 900px) {
-    background-image: url("/public/assets/technology/background-technology-tablet.jpg");
+    background-image: url("/assets/technology/background-technology-tablet.jpg");
   }
   @media screen and (min-width: 900px) {
     background-image: url("/assets/technology/background-technology-desktop.jpg");
@@ -19,12 +22,23 @@
     @media screen and (min-width: 600px) and (max-width: 900px) {
       margin-top: 100px;
     }
+
+    @media screen and (max-width: 600px) {
+      position: relative;
+      margin-top: 10px;
+      padding: 0px;
+    }
+
     .div_container {
       display: flex;
       margin-top: 100px;
-      @media screen and (min-width: 600px) and (max-width: 900px) {
+      @media screen and (max-width: 900px) {
         flex-direction: column;
       }
+      @media screen and (max-width: 600px) {
+        margin-top: 20px;
+      }
+
       .btn_container {
         margin-right: 50px;
         @media screen and (min-width: 600px) and (max-width: 900px) {
@@ -32,6 +46,12 @@
           display: flex;
           justify-content: center;
           margin: 30px 0 0 0;
+        }
+        @media screen and (max-width: 600px) {
+          order: 2;
+          display: flex;
+          justify-content: center;
+          margin: 30px 0;
         }
         div {
           width: 84px;
@@ -46,6 +66,12 @@
           @media screen and (min-width: 600px) and (max-width: 900px) {
             margin: 0 10px;
           }
+          @media screen and (max-width: 600px) {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            font-size: 16px;
+          }
         }
         .active_btn {
         }
@@ -57,10 +83,13 @@
       }
       .text_container {
         color: #d0d6f9;
-        @media screen and (min-width: 600px) and (max-width: 900px) {
+        @media screen and (max-width: 900px) {
           order: 3;
           margin-top: 30px;
           text-align: center;
+        }
+        @media screen and (max-width: 600px) {
+          margin-top: 0px;
         }
         .mini_title {
           margin-bottom: 15px;
@@ -70,12 +99,19 @@
           color: white;
           font-size: 56px;
           margin-bottom: 20px;
+          @media screen and (max-width: 600px) {
+            font-size: 32px;
+          }
         }
         .description {
           width: 60%;
           @media screen and (min-width: 600px) and (max-width: 900px) {
             margin: auto;
             width: 50%;
+          }
+          @media screen and (max-width: 600px) {
+            width: 80%;
+            margin: auto;
           }
         }
       }
@@ -96,8 +132,18 @@
             display: none;
           }
           .tabletImage {
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 30vh;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          order: 1;
+          .desktopImage {
+            display: none;
+          }
+          .tabletImage {
+            width: 100vw;
+            height: 25vh;
           }
         }
       }

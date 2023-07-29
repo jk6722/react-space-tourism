@@ -11,7 +11,7 @@ const DestinationPage = () => {
 
   useEffect(() => {
     setDests(data["destinations"]);
-    console.log(dests);
+    // console.log(dests);
   }, []);
 
   useEffect(() => {

@@ -2,13 +2,25 @@ import styles from "./HeaderMobile.module.scss";
 import Logo from "/assets/shared/logo.svg";
 import Xbtn from "/assets/shared/icon-close.svg";
 import Hamburger from "/assets/shared/icon-hamburger.svg";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import useOnclickOutside from "../../hooks/useOnclickOutside";
 
-const HeaderModal = () => {
+const HeaderModal = ({ setIsModalOpen }) => {
+  const refModal = useRef();
+
+  useEffect(() => {}, [refModal]);
+
+  useOnclickOutside(refModal, () => setIsModalOpen(false));
+
   return (
-    <div className={styles.modal_container}>
-      <div className={styles.link_container}>
+    <div className={styles.modal_container} ref={refModal}>
+      <div
+        className={styles.link_container}
+        onClick={() => {
+          setIsModalOpen(false);
+        }}
+      >
         <Link to="/" className={styles.link}>
           <div className>
             <span className={styles.link_number}>00</span> <span> HOME</span>
@@ -38,16 +50,21 @@ const HeaderModal = () => {
 
 const HeaderMobile = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setIsModalOpen((prev) => !prev);
   };
 
+  const handleNavToHome = () => {
+    navigate("/");
+  };
+
   return (
     <div className={styles.container}>
-      {isModalOpen && <HeaderModal />}
+      {isModalOpen && <HeaderModal setIsModalOpen={setIsModalOpen} />}
       <div className={styles.header_container}>
-        <div className={styles.logo_container}>
+        <div className={styles.logo_container} onClick={handleNavToHome}>
           <img src={Logo} alt="logo" />
         </div>
         <div className={styles.hambug_container} onClick={handleClick}>
