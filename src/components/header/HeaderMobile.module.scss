@@ -1,8 +1,8 @@
 .container {
   .header_container {
+    position: fixed;
     height: 100px;
     // background-color: orange;
-    position: relative;
     display: flex;
     align-items: center;
     padding: 10px 20px;

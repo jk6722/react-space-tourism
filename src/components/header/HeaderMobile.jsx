@@ -22,12 +22,13 @@ const HeaderModal = ({ setIsModalOpen }) => {
   };
 
   return (
-    <div className={styles.modal_container} ref={refModal}>
+    <div className={styles.modal_container}>
       <div
         className={styles.link_container}
         onClick={() => {
           setIsModalOpen(false);
         }}
+        ref={refModal}
       >
         <Link
           to="/"
