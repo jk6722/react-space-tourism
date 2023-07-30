@@ -34,7 +34,9 @@
       padding: 0 60px;
       height: inherit;
       @media screen and (min-width: 600px) and (max-width: 900px) {
-        padding: 0 30px;
+        // padding: 0 30px;
+        position: fixed;
+        right: 0;
       }
       letter-spacing: 2.36px;
       .link {
