@@ -32,6 +32,7 @@
       backdrop-filter: blur(50px);
       right: 0;
       padding: 0 60px;
+      height: inherit;
       @media screen and (min-width: 600px) and (max-width: 900px) {
         padding: 0 30px;
       }
